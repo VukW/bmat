@@ -1,1 +1,0 @@
-django-admin startproject works_single_view
