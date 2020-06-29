@@ -15,7 +15,7 @@ def index(request):
 
 def work(request, ISWC):
     work = Metadata.objects.get(ISWC=ISWC)
-    serializer = MetadataSerializer(work)
+    serializer = MetadataSerializer(work, context={'request': request})
     return JsonResponse(serializer.data)
 
 
@@ -25,6 +25,8 @@ class MetadataViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Metadata.objects.all().order_by('id')
     serializer_class = MetadataSerializer
+
+# class ContributorView(view)
 
 # class MetadataView(views.):
 #     """
