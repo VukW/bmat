@@ -1,12 +1,12 @@
-(O')Byrne
-(O')Doherty
-(O')Gallagher
-(O')Kelly
-(O')Moore
-(O')Quinn
-(O')Reilly
-(O')Ryan
-(O')Sullivan
+O'Byrne
+O'Doherty
+O'Gallagher
+O'Kelly
+O'Moore
+O'Quinn
+O'Reilly
+O'Ryan
+O'Sullivan
 Abazi
 Abbasov
 Abdullayev
@@ -268,7 +268,8 @@ Giovanni
 Girard
 Giuliani
 Gjika
-Gjoni or Gjonaj
+Gjoni
+Gjonaj
 Golob
 Golubev
 Golubović
@@ -487,7 +488,8 @@ Lehner
 Lehtinen
 Lehtonen
 Leitner
-Leka or Lekaj
+Leka
+Lekaj
 León
 Leone
 Leroy
@@ -564,7 +566,8 @@ Medina
 Mehmedović
 Mehmeti
 Meier
-Meijer, Meyer
+Meijer
+Meyer
 Melnic
 Melnyk
 Mendes
@@ -899,9 +902,10 @@ Ursu
 Valente
 Valentini
 Valon
-Van den Berg *
+Van den Berg
 Van der Meer
-Van Dijk, Van Dyk
+Van Dijk
+Van Dyk
 Van Leeuwen
 Vanags
 Varga
