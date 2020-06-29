@@ -56,6 +56,7 @@ class Command(BaseCommand):
                         continue
                     similar_contributors = similar_meta.contributors.all()
                     if to_set(similar_contributors) & contributors_names:
+                        meta.ISWC = meta.ISWC or similar_meta.ISWC
                         for similar_contributor in similar_contributors:
                             if similar_contributor.name not in contributors_names:
                                 meta.contributors.add(similar_contributor)
