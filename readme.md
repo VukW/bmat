@@ -18,8 +18,10 @@ docker-compose exec app python3.7 manage.py upload -v 1 data/test_data.csv
 ```
 
 ## Usage
+
 1. Postgres is exposed at `localhost:5432`, credentials can be found in `docker-compose.yml:postgres` env variables
 2. Django app is exposed at `localhost:8000`
+
 2.1. Django admin page: [`http://localhost:8000/admin`](http://localhost:8000/admin), credentials can be found in `docker-compose.yml:app` env variables
 2.2. REST endpoints, no authorization:
     list all works, with pagination:
@@ -36,3 +38,12 @@ docker-compose exec app python3.7 manage.py upload -v 1 data/test_data.csv
 ## Remove & restart from scratch
 1. Stop docker-compose (or `docker-compose down` if you run in detached mode)
 2. `docker-compose rm -f app postgres`
+
+## Clustering process
+
+Records are clustered at the moment of inserting new record.
+We just search
+1. records with the same ISMC (ther should be not more than one of such);
+2. records with the same title that have any commont contributor
+
+Than all contributors from these records are added to new instance, and the records are delete. Thus, only one record is left.
