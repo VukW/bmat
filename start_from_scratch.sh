@@ -1,4 +1,7 @@
 rm -rf postgres/db-data
+docker-compose rm postgres
+docker-compose rm app
+
 # change settings
 cd django_project
 

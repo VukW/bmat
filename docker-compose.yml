@@ -11,3 +11,23 @@ services:
       - POSTGRES_PASSWORD=123
     ports:
       - 5432:5432
+    networks:
+      - tools
+
+  app:
+    build: django_project/
+    command: /bin/sh start.sh
+    depends_on:
+      - postgres
+    ports:
+      - 8000:8000
+    environment:
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+      - DJANGO_SUPERUSER_PASSWORD=123321
+    volumes:
+      - ./data:/django_project/data
+    networks:
+      - tools
+networks:
+    tools:

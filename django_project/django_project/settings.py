@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'bmat',
         'USER': 'app_user',
         'PASSWORD': '123',
-        'HOST': 'localhost',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
