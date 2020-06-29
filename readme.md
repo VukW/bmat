@@ -7,7 +7,7 @@ docker-compose up
 ### Generate some test data
 ```
 cd data
-python generate_test_data.py -n 10000 test_data.csv
+python generate_test_data.py -n 300 test_data.csv
 ```
 
 ### Upload test data to the app via Django management command
@@ -24,7 +24,7 @@ docker-compose exec app python3.7 manage.py upload -v 1 data/test_data.csv
 2.2. REST endpoints, no authorization:
     list all works, with pagination:
     ```
-    curl -X GET http://localhost:8000/works/all -H "Accept: application/json"
+    curl -X GET http://localhost:8000/works/all/ -H "Accept: application/json"
     ```
    
     select work by ISWC:
