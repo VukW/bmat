@@ -2,8 +2,8 @@ version: "3"
 services:
   postgres:
     image: library/postgres:12.3
-    volumes:
-      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+#    volumes:
+#      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
 #      - ./postgres/db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=bmat
