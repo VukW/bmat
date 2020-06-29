@@ -22,8 +22,9 @@ docker-compose exec app python3.7 manage.py upload -v 1 data/test_data.csv
 1. Postgres is exposed at `localhost:5432`, credentials can be found in `docker-compose.yml:postgres` env variables
 2. Django app is exposed at `localhost:8000`
 
-2.1. Django admin page: [`http://localhost:8000/admin`](http://localhost:8000/admin), credentials can be found in `docker-compose.yml:app` env variables
-2.2. REST endpoints, no authorization:
+  2.1. Django admin page: [`http://localhost:8000/admin`](http://localhost:8000/admin), credentials can be found in `docker-compose.yml:app` env variables
+
+  2.2. REST endpoints, no authorization:
     list all works, with pagination:
     ```
     curl -X GET http://localhost:8000/works/all/ -H "Accept: application/json"
